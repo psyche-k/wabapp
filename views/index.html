@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>爱·电影</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/userwork.js" ></script>
+    <script type="text/javascript" src="javascripts/cinema.js" ></script>
+    <script type="text/javascript" src="javascripts/hotcinema.js"></script>
+    <script type="text/javascript" src="javascripts/nextcinema.js"></script>
+    <link rel='stylesheet' href='stylesheets/cinema.css' />
+    <link rel='stylesheet' href='stylesheets/index_style.css' />
+  </head>
+  
+  <body>
+    <!--标题部分-->
+    <div id="index_header">
+      <a id="login_link" onclick="showWin(), createCode()" href="#" mce_href="#">登录</a>
+      <h1>爱·电影</h1>
+    </div>
+
+    <!--登录框部分-->
+    <div type="login">
+      <div id="win">
+        <div id="login_page_title">
+          <h1>登录</h1>
+          <span id="login_page_close" onclick="hide()">X</span>
+        </div>
+        <div id="login_page_content">
+          <label>
+            <span>Phone: </span>
+            <input type="phone" id="phone_input" placeholder="请输入电话号码"/>
+          </label>
+          <label>
+            <span>Password: </span>
+            <input type="password" id="password_input" placeholder="请输入密码" /> 
+          </label>
+          <label>
+            <div onselectstart="return false;" class="code" id="checkCode"></div>
+            <a href="#" onclick="createCode()">看不清换一个</a>
+          </label>
+          <label>
+            <span>验证码: </span>
+            <input type="text" id="code_input" placeholder="请输入验证码"/>
+          </label>
+          <label>
+            <div>
+              <button class="page_button" onclick="login_denglu()"> 登录 </button>
+              <button class="page_button" id="register_button" onclick="register()"> 注册 </button>
+            </div>
+            <a href="#"> 忘记密码 </a>
+            <button class="page_button" id="clear_button" onclick="user_clear()"> 清除</button>
+          </label>
+        </div>
+      </div>
+      <div id="loginsuccess">
+        <strong >欢迎您，尊敬的</strong>
+        <strong id="welcome">visitor</strong>
+        <button onclick="logout()">注销</button>
+      </div>
+    </div>
+
+    <!--底部-->
+    <div id="index_footer"></div>
+  </body>
+</html>
