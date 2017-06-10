@@ -1,3 +1,6 @@
 # wabapp
 build by express mvc
-14331335
+how to start
+In the entire file root directory
+Open the CMD
+perform npm start
