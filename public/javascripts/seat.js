@@ -65,34 +65,3 @@ function recalculateTotal(sc) {
 	}); 
  return total; 
 }
-
-function setprice (cid, ss, date) {
-	$.each(hotmoviedetil, function(i, item) {
-		if (cid == item['id']) {
-			price = item['price']*1;
-			document.getElementById('cinema').innerHTML = item['nm'];
-      document.getElementById('time').innerHTML = date+" "+item[ss];
-		};
-	})
-	$.each(nextcinemasummary, function(i, item) {
-		if (cid == item['id']) {
-			price = item['price']*1;
-			document.getElementById('cinema').innerHTML = item['nm'];
-      document.getElementById('time').innerHTML = date+" "+item[ss];
-		};
-	})
-}
-
-function getQueryStringArgs(){  
-  var qs = (location.search.length>0?location.search.substring(1):"");
-  var args = {};  
-  var items = qs.split("&");  
-  var item = null, name=null, value=null;  
-  for(var i=0;i<items.length;i++) {
-    item=items[i].split("=");  
-    name=decodeURIComponent(item[0]);  
-    value=decodeURIComponent(item[1]);  
-    args[name]=value;
-  }
-  return args;
-}
